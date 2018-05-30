@@ -39,7 +39,7 @@
 % \renewcommand{\thesection}{\arabic{section}}
 
 % Code display settings
-\setmonofont{Hack}[SizeFeatures={Size=10}]
+% \setmonofont{Hack}[SizeFeatures={Size=10}]
 \usemintedstyle{perldoc}
 
 % Unit setup
