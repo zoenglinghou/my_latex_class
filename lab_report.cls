@@ -7,6 +7,7 @@
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage[margin=0.25in]{caption}
 \RequirePackage[margin=1in]{geometry}
+\RequirePackage[style=nature]{biblatex}
 \RequirePackage[toc,page,header]{appendix}
 \RequirePackage{abstract}
 \RequirePackage{amsmath}
@@ -23,6 +24,7 @@
 \RequirePackage{pdfpages}
 \RequirePackage{placeins}
 \RequirePackage{siunitx}
+\RequirePackage{subcaption}
 \RequirePackage{systeme}
 
 % tikz
@@ -39,26 +41,34 @@
 % \renewcommand{\thesection}{\arabic{section}}
 
 % Code display settings
-% \setmonofont{Hack}[SizeFeatures={Size=10}]
+\setmonofont{Hack}[SizeFeatures={Size=9}]
 \usemintedstyle{perldoc}
 
 % Unit setup
 \sisetup{load-configurations = abbreviations}
 
 % Title Page Revamped
-\renewcommand{\maketitle}[4]{
-
+\renewcommand{\maketitle}[5][center]{
+	% inputs: Title, Subtitle, Item 1 (name), Item 2 (UID)
+	% options: center, flushleft, flushright
 	\begin{titlepage}
-		\centering\par
-		\vspace*{1.5in}
-		{\scshape\Large #2 \par}
-		\vspace{0.25in} % Subtitle
-		{\scshape\huge\textbf #1 \par} % Title
-		\vspace{4in}
-		{\Large #3 \par} % Name
-		{\Large #4 \par} % UID
-		\vspace{0.5in}
-		{\large \today \par} % Date
+		\begin{center}
+			\par
+			\vspace*{1.5in}
+			{\scshape\Large #3 \par}
+			\vspace{0.25in}
+			{\scshape\huge\textbf #2 \par}
+		\end{center}
+		
+		\vspace*{\fill}
+
+		\begin{#1}
+			{\Large #4 \par}
+			{\Large #5 \par}
+			\vspace{0.5in}
+			{\large \today \par}
+		\end{#1}
+
 	\end{titlepage}
 
 }
@@ -68,6 +78,3 @@
 
 % Graphics Path
 \graphicspath{{figures/}}
-
-% Bibliography
-\bibliographystyle{naturemag}

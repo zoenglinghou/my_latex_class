@@ -9,19 +9,19 @@
 
 % Redefine Section Title
 \titleformat{\section} % Customize the \section command
-	{\fontsize{12}{12}\scshape\raggedright\bf} % Make the \section headers large (\Large), % small capitals (\scshape) and left aligned (\raggedright)
+	{\fontsize{11}{11}\scshape\raggedright\bf} % Make the \section headers large (\Large), % small capitals (\scshape) and left aligned (\raggedright)
 	{}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
 	{}                           % Can be used to insert code before the heading
 	[\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection} % Customize the \subsection command
-	{\fontsize{11}{11}\scshape\raggedright\bf}
+	{\fontsize{10.5}{10.5}\scshape\raggedright\bf}
 	{}{0em}
 	{}
 
 \titleformat{\subsubsection} % Customize the \subsubsection command
 	[runin]
-	{\fontsize{10.5}{10.5}\scshape\raggedright\bf}
+	{\fontsize{10}{10}\scshape\raggedright\bf}
 	{}{0em}
 	{}
 	[]
@@ -54,6 +54,7 @@
 	\begin{tabular*}{\textwidth}{l p{5.75in}}
 		\textbf{#1:} & #2
 	\end{tabular*}
+	\vspace{-0.5em}
 }
 
 % Experience
