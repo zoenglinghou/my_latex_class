@@ -1,0 +1,3 @@
+[submodule "beamerMaterialDesign"]
+	path = beamerMaterialDesign
+	url = https://github.com/edasubert/beamerMaterialDesign.git
