@@ -19,7 +19,7 @@
 % German support
 \RequirePackage{hyphenat}
 \hyphenation{Mathe-matik wieder-gewinnen}
+\MakeOuterQuote{"}
 
 % Chinese support
 \RequirePackage{xeCJK}
-\setCJKmainfont{Songti SC}

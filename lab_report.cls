@@ -6,7 +6,7 @@
 % Packages
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage[margin=0.25in]{caption}
-\RequirePackage[margin=1in]{geometry}
+\RequirePackage[margin=1.25in]{geometry}
 \RequirePackage[style=nature]{biblatex}
 \RequirePackage[toc,page,header]{appendix}
 \RequirePackage{abstract}
@@ -17,15 +17,24 @@
 \RequirePackage{fontspec}
 \RequirePackage{gensymb}
 \RequirePackage{graphicx}
+\RequirePackage{lscape}
 \RequirePackage{minted}
+\RequirePackage{multicol}
 \RequirePackage{multirow}
 \RequirePackage{mwe}
-\RequirePackage{newtxmath}
+% \RequirePackage{newtxmath}
 \RequirePackage{pdfpages}
 \RequirePackage{placeins}
-\RequirePackage{siunitx}
+\RequirePackage[separate-uncertainty=true]{siunitx}
 \RequirePackage{subcaption}
 \RequirePackage{systeme}
+
+% Unicode Math
+\expandafter\let\csname not=\endcsname\relax
+\expandafter\let\csname not<\endcsname\relax
+\expandafter\let\csname not>\endcsname\relax
+\RequirePackage{unicode-math}
+
 
 % tikz
 \RequirePackage{pgfplots}
@@ -41,7 +50,7 @@
 % \renewcommand{\thesection}{\arabic{section}}
 
 % Code display settings
-\setmonofont{Hack}[SizeFeatures={Size=9}]
+\setmonofont{Hack}[SizeFeatures={Size=8}]
 \usemintedstyle{perldoc}
 
 % Unit setup
@@ -57,7 +66,7 @@
 			\vspace*{1.5in}
 			{\scshape\Large #3 \par}
 			\vspace{0.25in}
-			{\scshape\huge\textbf #2 \par}
+			{\scshape\huge #2 \par}
 		\end{center}
 		
 		\vspace*{\fill}
@@ -78,3 +87,6 @@
 
 % Graphics Path
 \graphicspath{{figures/}}
+
+% Align math page break
+\allowdisplaybreaks
