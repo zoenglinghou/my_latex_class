@@ -107,7 +107,7 @@
     }
 }
 
-\newcommand{\leftheaderns}[1]{%
+\newcommand{\leftheaderns}[1]{
 
     \begin{tabular}{p{3cm}p{12.5cm}}
         #1
